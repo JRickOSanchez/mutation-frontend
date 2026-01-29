@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = 'https://mutation-api.onrender.com/api';
+  private baseUrl = 'https://mutation-api-luia.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 

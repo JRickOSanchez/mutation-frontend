@@ -1,59 +1,68 @@
-# MutationFrontend
+# Mutation Detection Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Aplicación web desarrollada en Angular que consume la API de detección de mutaciones genéticas.
+El objetivo del frontend es mostrar de forma clara y ordenada las estadísticas y el historial
+de verificaciones realizadas por el backend.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías utilizadas
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+
+---
+
+## Descripción general
+
+La aplicación consume el backend de detección de mutaciones genéticas y muestra:
+
+- Estadísticas generales obtenidas desde el endpoint `/api/stats`
+- Historial de las últimas 10 verificaciones realizadas desde `/api/list`
+
+La interfaz presenta la información de forma legible y organizada, sin mostrar el JSON en bruto.
+
+---
+
+## Requisitos
+
+- Node.js (versión 18 o superior recomendada)
+- Angular CLI
+
+---
+
+## Instalación y ejecución local
+
+· Clonar el repositorio:
 
 ```bash
+git clone https://github.com/JRickOSanchez/mutation-frontend
+```
+
+· Ejecutar los siguientes comandos desde la carpeta del proyecto:
+
+```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación quedará disponible en: http://localhost:4200
 
-## Code scaffolding
+## Configuración de la API
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+El frontend consume el backend desplegado de forma remota en Render.
 
-```bash
-ng generate component component-name
-```
+URL base de la API utilizada: https://mutation-api-luia.onrender.com/api
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Los endpoints consumidos son:
+· /stats
+· /list
 
-```bash
-ng generate --help
-```
+## Notas
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+· El frontend se ejecuta de forma local.
+· El backend es accesible de forma remota.
+· No se utilizan plantillas externas.
+· El diseño y la estructura fueron desarrollados de forma personalizada.
