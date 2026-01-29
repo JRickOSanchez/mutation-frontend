@@ -1,0 +1,35 @@
+<header class="stats">
+  <div>
+    <h3>Mutaciones</h3>
+    <p>{{ stats?.count_mutations }}</p>
+  </div>
+  <div>
+    <h3>No mutaciones</h3>
+    <p>{{ stats?.count_no_mutation }}</p>
+  </div>
+  <div>
+    <h3>Ratio</h3>
+    <p>{{ stats?.ratio }}</p>
+  </div>
+</header>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>ADN</th>
+      <th>Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of samples">
+      <td>{{ s.date }}</td>
+      <td>
+        <div *ngFor="let row of s.dna">
+          {{ row }}
+        </div>
+      </td>
+      <td>{{ s.result }}</td>
+    </tr>
+  </tbody>
+</table>
